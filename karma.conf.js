@@ -39,7 +39,18 @@ module.exports = function(config) {
                             'ngtemplate?relativeTo=',
                             'raw'
                         ]
-                    }
+                    },
+                    {
+                        test: /\.scss$/,
+                        loaders: [
+                            'style',
+                            'css?sourceMap',
+                            'sass?sourceMap']
+                    },
+                    {
+                        test: /\.css$/,
+                        loaders: ['style', 'css']
+                    },
                 ]
             },
             watch: true

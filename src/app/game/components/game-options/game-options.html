@@ -1,0 +1,7 @@
+<section class="options">
+    <game-option ng-repeat="option in $ctrl.options"
+        option="option"
+        on-choice-selected="$ctrl.onChoiceSelected($locals);"
+        disable="$ctrl.disable"
+    ></game-option>
+</section>

@@ -1,1 +1,25 @@
-<h1>Game Page</h1>
+<game-header
+    class="page-header"
+    title="$ctrl.title"
+></game-header>
+
+<section class="jumbotron">
+    <div class="container">
+        <div class="score">
+            <div>CPU wins: {{ $ctrl.cpuWins }}</div>
+            <div>User wins: {{ $ctrl.userWins }}</div>
+        </div>
+        <game-options
+            class="game-options"
+            options="$ctrl.options"
+            on-choice-selected="$ctrl.selectOptions($event);"
+            disable="$ctrl.waitForAi"
+        ></game-options>
+        <div class="choices" ng-if="$ctrl.cpuChoice">
+            CPU chose: {{ $ctrl.cpuChoice }}
+        </div>
+        <div class="winner" ng-if="$ctrl.winner">
+            <div>{{ $ctrl.winner }}</div>
+        </div>
+    </div>
+</section>
