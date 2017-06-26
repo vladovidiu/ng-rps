@@ -6,7 +6,7 @@ const GamePageComponent = {
     controller: class GamePageComponent {
         /* @ngInject */
         constructor() {
-            console.log('GamePage');
+            this.test = 'Test Unit Testing';
         }
     }
 }

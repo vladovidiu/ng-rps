@@ -55,14 +55,14 @@ module.exports = function(options) {
           exclude: [ /node_modules/ ],
           loaders: jsLoaders
         },
-    {
-      test: /\.html$/,
-      loaders: [
-        'ngtemplate?relativeTo=' + helpers.root('src'),
-        'raw'
-      ],
-      exclude: [helpers.root('src/index.html')]
-    },
+        {
+          test: /\.html$/,
+          loaders: [
+            'ngtemplate?relativeTo=' + helpers.root('src'),
+            'raw'
+          ],
+          exclude: [helpers.root('src/index.html')]
+        },
         {
           test: /\.scss$/,
           loaders: [
